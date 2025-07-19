@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil Discord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet"> <!-- Neo Castel substituída por Neonderthaw (Neo Castel não existe no Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet"> <!-- Pixelify -->
+  <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet"> <!-- Ribes substituída por Ribeye (Ribes não existe no Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@700&display=swap" rel="stylesheet"> <!-- Biorym -->
+  <link href="https://fonts.googleapis.com/css2?family=Sinistre&display=swap" rel="stylesheet"> <!-- Sinistry substituída por Sinistre (Sinistry não existe no Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet"> <!-- Chicle -->
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap" rel="stylesheet"> <!-- Museo Moderno -->
+  <link href="https://fonts.googleapis.com/css2?family=Compagnon:wght@700&display=swap" rel="stylesheet"> <!-- Compagnon -->
+</head>
+<body style="background: #23272a; min-height: 100vh;">
+  <div class="edit-bar">
+    <button id="editNameBtn" class="btn btn-primary" style="font-weight: bold;">Editar nome</button>
+    <input id="editNameInput" type="text" value="Thiago" style="display: none; max-width: 200px;" class="form-control" />
+    <button id="editNeonBtn" class="btn btn-secondary" style="font-weight: bold;">Editar cor do neon</button>
+    <input id="editNeonColor" type="color" value="#a259f7" style="display: none; width: 40px; height: 40px; border: none; background: none; cursor: pointer;" />
+  </div>
+  <div class="profile-grid">
+    <!-- Card original -->
+    <div class="profile-root-theme" id="profileRoot" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024'); --primary-color: rgb(26, 36, 86); --secondary-color: rgb(216, 181, 235); --average-color: rgb(13, 18, 47);">
+      <div class="d-flex flex-column profile-content-banner" id="profileContent">
+        <svg id="bannerSvg" viewBox="0 0 340 120">
+          <mask id="uid_230">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_230)">
+            <div class="profile-banner-img" id="profileBanner"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner" id="profileAvatarContainer">
+          <img id="profileImg" width="80" height="80" crossorigin="anonymous" data-bs-toggle="tooltip" data-bs-placement="top" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-decoration-banner" id="profileDecorationContainer">
+          <img id="profileDecor" width="96" height="96" crossorigin="anonymous" data-bs-toggle="tooltip" data-bs-placement="top" style="display: none;">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 id="profileDisplayName" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" id="profileJoinDate" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Cherry Bomb One -->
+    <div class="profile-root-theme" id="profileRoot2" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024'); --primary-color: rgb(26, 36, 86); --secondary-color: rgb(216, 181, 235); --average-color: rgb(13, 18, 47);">
+      <div class="d-flex flex-column profile-content-banner" id="profileContent2">
+        <svg id="bannerSvg2" viewBox="0 0 340 120">
+          <mask id="uid_231">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_231)">
+            <div class="profile-banner-img" id="profileBanner2"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner" id="profileAvatarContainer2">
+          <img id="profileImg2" width="80" height="80" crossorigin="anonymous" data-bs-toggle="tooltip" data-bs-placement="top" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-decoration-banner" id="profileDecorationContainer2">
+          <img id="profileDecor2" width="96" height="96" crossorigin="anonymous" data-bs-toggle="tooltip" data-bs-placement="top" style="display: none;">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-cherry" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" id="profileJoinDate2" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Neo Castel (Neonderthaw) -->
+    <div class="profile-root-theme" id="profileRoot3" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024');">
+      <div class="d-flex flex-column profile-content-banner">
+        <svg viewBox="0 0 340 120">
+          <mask id="uid_232">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_232)">
+            <div class="profile-banner-img"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner">
+          <img width="80" height="80" crossorigin="anonymous" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-neocastel" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Pixelify -->
+    <div class="profile-root-theme" id="profileRoot4" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024');">
+      <div class="d-flex flex-column profile-content-banner">
+        <svg viewBox="0 0 340 120">
+          <mask id="uid_233">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_233)">
+            <div class="profile-banner-img"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner">
+          <img width="80" height="80" crossorigin="anonymous" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-pixelify" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Ribes (Ribeye) -->
+    <div class="profile-root-theme" id="profileRoot5" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024');">
+      <div class="d-flex flex-column profile-content-banner">
+        <svg viewBox="0 0 340 120">
+          <mask id="uid_234">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_234)">
+            <div class="profile-banner-img"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner">
+          <img width="80" height="80" crossorigin="anonymous" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-ribes" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Biorym (BioRhyme) -->
+    <div class="profile-root-theme" id="profileRoot6" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024');">
+      <div class="d-flex flex-column profile-content-banner">
+        <svg viewBox="0 0 340 120">
+          <mask id="uid_235">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_235)">
+            <div class="profile-banner-img"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner">
+          <img width="80" height="80" crossorigin="anonymous" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-biorym" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Sinistry (Sinistre) -->
+    <div class="profile-root-theme" id="profileRoot7" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024');">
+      <div class="d-flex flex-column profile-content-banner">
+        <svg viewBox="0 0 340 120">
+          <mask id="uid_236">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_236)">
+            <div class="profile-banner-img"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner">
+          <img width="80" height="80" crossorigin="anonymous" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-sinistry" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Chicle -->
+    <div class="profile-root-theme" id="profileRoot8" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024');">
+      <div class="d-flex flex-column profile-content-banner">
+        <svg viewBox="0 0 340 120">
+          <mask id="uid_237">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_237)">
+            <div class="profile-banner-img"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner">
+          <img width="80" height="80" crossorigin="anonymous" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-chicle" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Museo Moderno -->
+    <div class="profile-root-theme" id="profileRoot9" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024');">
+      <div class="d-flex flex-column profile-content-banner">
+        <svg viewBox="0 0 340 120">
+          <mask id="uid_238">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_238)">
+            <div class="profile-banner-img"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner">
+          <img width="80" height="80" crossorigin="anonymous" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-museo" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card variação Compagnon -->
+    <div class="profile-root-theme" id="profileRoot10" style="--profile-banner-url: url('https://cdn.discordapp.com/banners/223801077521186816/a_20d3c09e815b0b5b8dfe2656a8888862.gif?size=1024');">
+      <div class="d-flex flex-column profile-content-banner">
+        <svg viewBox="0 0 340 120">
+          <mask id="uid_239">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle fill="black" cx="58" cy="112" r="46"></circle>
+          </mask>
+          <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#uid_239)">
+            <div class="profile-banner-img"></div>
+          </foreignObject>
+        </svg>
+        <div class="profile-avatar-banner">
+          <img width="80" height="80" crossorigin="anonymous" src="https://cdn.discordapp.com/avatars/223801077521186816/a_8436d4204fc87fe3feb6743aa67ac52e.gif?size=512">
+        </div>
+        <div class="profile-body d-flex flex-column">
+          <div style="padding-top: 12px; padding-right: 12px; padding-left: 12px;">
+            <div class="profile-header">
+              <h1 class="profileDisplayName-compagnon" style="word-break: break-word; font-size: 20px; line-height: 24px; font-weight: 600;">Thiago</h1>
+            </div>
+          </div>
+          <div class="profile-divider"></div>
+          <div style="padding: 0 12px;">
+            <div class="profile-section" style="padding-bottom: 12px;">
+              <h2 class="profile-section-header">Discord Member Since</h2>
+              <div class="d-flex align-items-center">
+                <div class="profile-text" style="font-weight: 400;">Sep 9, 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const editBtn = document.getElementById('editNameBtn');
+    const input = document.getElementById('editNameInput');
+    const nameSelectors = [
+      '#profileDisplayName',
+      '.profileDisplayName-cherry',
+      '.profileDisplayName-neocastel',
+      '.profileDisplayName-pixelify',
+      '.profileDisplayName-ribes',
+      '.profileDisplayName-biorym',
+      '.profileDisplayName-sinistry',
+      '.profileDisplayName-chicle',
+      '.profileDisplayName-museo',
+      '.profileDisplayName-compagnon'
+    ];
+    editBtn.onclick = () => {
+      input.style.display = input.style.display === 'none' ? 'inline-block' : 'none';
+      if (input.style.display !== 'none') input.focus();
+    };
+    input.oninput = () => {
+      nameSelectors.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => el.textContent = input.value);
+      });
+    };
+    // Neon color picker
+    const neonBtn = document.getElementById('editNeonBtn');
+    const neonColor = document.getElementById('editNeonColor');
+    neonBtn.onclick = () => {
+      neonColor.style.display = neonColor.style.display === 'none' ? 'inline-block' : 'none';
+    };
+    neonColor.oninput = () => {
+      const color = neonColor.value;
+      nameSelectors.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+          el.style.color = color;
+        });
+      });
+    };
+  </script>
+</body>
+</html>
